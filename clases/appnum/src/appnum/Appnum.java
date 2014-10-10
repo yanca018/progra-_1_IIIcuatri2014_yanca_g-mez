@@ -5,11 +5,12 @@
  */
 
 package appnum;
+
 import java.util.Scanner;
 
 /**
  *
- * @author Yanca
+ * @author jeancarlos
  */
 public class Appnum {
 
@@ -17,78 +18,24 @@ public class Appnum {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
-        int num=0;
-        int op=0;
-        int valor1=0;
-        int valor2=0;
-        
-        double resultado;
-        char continuar;
-        boolean validar=true;
-        
-        Scanner teclado = new Scanner(System.in);
-        
-        clsnum aclsnum = new clsnum();
-        
-        do{
-             
-            System.out.println("digite el numero");
-            System.out.println("1_2,5,8 cuadrado");
-            System.out.println("2_ 4,7,9 multiplicación");
-            
-            op = Integer.parseInt(teclado.nextLine());
-            
-            
-       
-            switch(op){
-                
-                
-                case 1 :
-                    
-                    
-                        System.out.println("digite el valor del primero");
-                       teclado = new Scanner(System.in);
-                        valor1= Integer.parseInt(teclado.nextLine());
-                        System.out.println("digite el valor del segundo numero ");
-                        teclado= new Scanner(System.in);
-                        valor2= Integer.parseInt(teclado.nextLine());
-                        resultado = aclsnum.numero(valor1, valor2);
-                        System.out.println(resultado);
-                       break;
-            
-                case 2:
-                    
-                    System.out.println("numero multiplicado");
-                    teclado= new Scanner(System.in);
-                    valor1=Integer.parseInt(teclado.nextLine());
-                    resultado=aclsnum.numeromulti(valor1);
-                    System.out.println(resultado);
-                    break;
-                    
-            
-            
-            
-            
-            
-            
-            }
-        
-        
-        
-        
-        
-            System.out.println("desea continuar con otra operacion S/N");
-            continuar =teclado.nextLine().charAt(0);
-            if((continuar=='S')||(continuar=='S')){
-            validar=true;
-            
-            
-            }else{
-             validar=false;
-            
-            }
 
-        } while (validar);
+       Scanner in = new Scanner(System.in);
+        int num;
+        System.out.print("Ingrese un numero entero : ");
+        num=in.nextInt();
+        switch(num%10)
+        {
+            case 2:case 5:case 8:
+                System.out.println("El cuadrado del numero es : "+num*num);break;
+            case 4:case 7:case 9:
+                System.out.println("El numero multiplicado por 5 es : "+num*5);break;
+            default: 
+                System.out.println("El numero ingresado es : "+num);break;
+        }
     }
 }
+        
+         
+         
+    
+    
