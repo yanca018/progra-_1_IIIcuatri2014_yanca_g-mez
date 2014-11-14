@@ -12,23 +12,26 @@ package clase10;
  */
 public class insercion {
     
-  public static void ordenacionInsercion(int[] v) {
-        final int N = v.length;
-        for(int i=1; i<N; i++) {
-            int j=i;
-            while(j>0 && v[j]<v[j-1] ){
-                int tmp = v[j];
-                v[j]    = v[j-1];
-                v[j-1]  = tmp;
-                j--;
-            }
+  
+         public static void main(String[] args) {
+        
+        int[] nums = {1,4,9,59,23,26,20,1,23,56,7};
+        int[] ordenarInsercion = orden.ordenarInsercion(nums);
+        for (int i = 0; i < ordenarInsercion.length; i++) {
+            System.out.println(ordenarInsercion[i]);            
         }
     }
-
-    static void ordenacionInsercion(int[] arreglito, String a) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public int[] ordenarInsercion(int[] array){
+        int aux;
+        for (int i = 1; i < array.length; i++) {
+            aux = array[i];
+            for (int j = i-1; j >=0 && array[j]>aux; j--) {
+                array[j+1]=array[j];
+                array[j]=aux;
+            }
+        }
+        return array;
     }
-        
         
         
     

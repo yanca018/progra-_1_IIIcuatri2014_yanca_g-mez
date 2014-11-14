@@ -31,8 +31,8 @@ public class Clase10 {
         ordenamientoburbuja ordenamientoburbuja = new ordenamientoburbuja();
         ordenamientoburbuja.ordenamientoB(arreglito, "A");
         
-        insercion oinsercion = new insercion();
-        insercion.ordenacionInsercion(arreglito, "A");
+        
+        
 }
     
     

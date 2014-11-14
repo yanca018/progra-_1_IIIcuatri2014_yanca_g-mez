@@ -21,6 +21,7 @@ public class Calse6 {
         int opcion=0;
         
        Scanner oScanner =new Scanner(System.in);
+      
         
         
         
